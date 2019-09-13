@@ -7,7 +7,7 @@ configure do
     :authentication => :plain,
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'localhost:4567',
+    :domain => ENV['LOCAL_URL'],
     :enable_starttls_auto => true
     }
   ActionMailer::Base.view_paths = File.expand_path('app/views/')
