@@ -2,7 +2,7 @@ configure do
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.smtp_settings = {
-    :address => 'localhost',
+    :address => ENV['ADDRESS'],
     :port => 1025,
     :authentication => :plain,
     :user_name => ENV['SENDGRID_USERNAME'],
